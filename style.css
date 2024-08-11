@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body{
+    background-color: #e8e8e8;
+}
+
+.profilePic {
+    width: 400px; /* Set only the width */
+    height: auto; /* The height will adjust to maintain the aspect ratio */
+    border-radius: 10%; /* Circular profile picture */
+    position: absolute; /* Allows precise positioning */
+    top: 179px; /* Distance from the top */
+    left: 510px; /* Distance from the left */
+    z-index: 1; /* Higher z-index value */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect to make it look elevated */
+}
+
+.card {
+    width: 1600px;
+    height: 800px;
+    position: absolute; 
+    top: 70px;
+    left: 160px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+.intro{
+    color: rgb(36, 36, 36);
+    width: 80%; /* Customize the width */
+    max-width: 600px; /* Max width of the text block */
+    text-align: justify; /* Justify the text */
+    font-size: 23px; /* Customize font size */
+    line-height: 1.6; /* Line height for readability */
+    font-family: 'Poppins', sans-serif; /* Change font to Poppins */
+    position: absolute; /* Allows precise positioning */
+    top: 125px; /* Distance from the top */
+    right: 332px; /* Distance from the right */
+    z-index: 3; /* Higher z-index value to ensure it is in front */
+}
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+.typing-text{
+    font-size: 27px;
+    font-weight: 600;
+    min-width: 480px;
+    font-family: 'Poppins', sans-serif;
+    top: 95px;
+    right: 225px;
+    position: absolute;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    position: absolute;
+    width: calc(100% + 8px);
+    width: 480px;
+    height: 100%;
+    border-left: 3px solid black;
+    animation: cursor 0.6s infinite;
+    top: 84px;
+    right: 365px;
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Future Web Designer";
+    }
+    21%, 40%{
+        content: "CpE Student";
+    }
+    41%, 60%{
+        content: "Third Year Student";
+    }
+    61%, 80%{
+        content: "College Student";
+    }
+    81%, 100%{
+        content: "Future Engineer";
+    }
+}
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+.bioText {
+    color: rgb(36, 36, 36);
+    width: 80%; /* Customize the width */
+    max-width: 600px; /* Max width of the text block */
+    text-align: justify; /* Justify the text */
+    font-size: 16px; /* Customize font size */
+    line-height: 1.6; /* Line height for readability */
+    font-family: 'Poppins', sans-serif; /* Change font to Poppins */
+    position: absolute; /* Allows precise positioning */
+    top: 244px; /* Distance from the top */
+    right: 329px; /* Distance from the right */
+    z-index: 2; /* Higher z-index value to ensure it is in front */
+}
+
+.social_icons {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.social_icons .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    height: 60px;
+    width: 60px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    margin: 0 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    top: 650px;
+    left: -40px;
+}
+
+.social_icons .icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.social_icons .icon .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 13px;
+    background: #fff;
+    color: #202020;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.social_icons .icon:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-35px);
+}
+
+.social_icons .icon.facebook:hover {
+    background: #4267b2;
+}
+
+.social_icons .icon.twitter:hover {
+    background: #1da1f2;
+}
+
+.social_icons .icon.instagram:hover {
+    background: #e1306c;
+}
+
+/* ============================================================================================================================= */
+/* Responsive adjustments for smaller screens */
+/* ============================================================================================================================= */
+@media (max-width: 1450px) {
+    .intro {
+        top: 120px; /* Adjusted for MacBook Air */
+        right: 140.5px; /* Reduced margin for smaller screens */
+        font-size: 15px; /* Slightly smaller font for better fit */
+    }
+
+    .bioText {
+        top: 220px; /* Adjusted for MacBook Air */
+        right: 140px; /* Reduced margin for smaller screens */
+        font-size: 15px; /* Slightly smaller font for better fit */
+    }
+
+    .profilePic {
+        top: 150px; /* Adjusted for MacBook Air */
+        left: 150px; /* Adjusted for MacBook Air */
+        width: 350px; /* Reduced size for better fit */
+    }
+
+    .typing-text {
+        top: 80px; /* Adjusted for MacBook Air */
+        right: 130px; /* Adjusted for MacBook Air */
+        font-size: 22px; /* Slightly smaller font size */
+    }
+
+    .card {
+        width: 1200px; /* Adjusted width */
+        height: 660px; /* Adjusted height */
+        left: 50px; /* Adjusted left position */
+        top: 50 px; /* Adjusted top position */
+        border-radius: 25px; /* Reduced border-radius */
+    }
+
+    .social_icons .icon {
+        left: -55px;
+        top: 550px; /* Adjusted for MacBook Air */
+    }
+}
+
+@media (max-width: 995px) {
+    .intro {
+        top: 280px; /* Adjusted for MacBook Air */
+        right: 25px; /* Reduced margin for smaller screens */
+        font-size: 11px; /* Slightly smaller font for better fit */
+    }
+
+    .bioText {
+        top: 350px; /* Adjusted for MacBook Air */
+        right: 111px; /* Reduced margin for smaller screens */
+        font-size: 9px; /* Slightly smaller font for better fit */
+        width: 295px;
+    }
+
+    .profilePic {
+        top: 90px; /* Adjusted for MacBook Air */
+        left: 160px; /* Adjusted for MacBook Air */
+        width: 160px; /* Reduced size for better fit */
+    }
+
+    .typing-text {
+        top: 160px; /* Adjusted for MacBook Air */
+        right: -37px; /* Adjusted for MacBook Air */
+        font-size: 12px;
+    }
+
+    .card {
+        width: 420px; /* Adjusted width */
+        height: 740px; /* Adjusted height */
+        left: 30px; /* Adjusted left position */
+        top: 40px; /* Adjusted top position */
+        border-radius: 25px; /* Reduced border-radius */
+    }
+
+    .social_icons .icon {
+        left: -45px;
+        top: 580px; /* Adjusted for MacBook Air */
+        width: 45px; /* Adjusted icon width */
+        height: 45px;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro {
+        top: 280px; /* Adjusted for MacBook Air */
+        right: 25px; /* Reduced margin for smaller screens */
+        font-size: 11px; /* Slightly smaller font for better fit */
+    }
+
+    .bioText {
+        top: 350px; /* Adjusted for MacBook Air */
+        right: 89px; /* Reduced margin for smaller screens */
+        font-size: 9px; /* Slightly smaller font for better fit */
+        width: 295px;
+    }
+
+    .profilePic {
+        top: 90px; /* Adjusted for MacBook Air */
+        left: 150px; /* Adjusted for MacBook Air */
+        width: 160px; /* Reduced size for better fit */
+    }
+
+    .typing-text {
+        top: 160px; /* Adjusted for MacBook Air */
+        right: -48px; /* Adjusted for MacBook Air */
+        font-size: 12px;
+    }
+
+    .card {
+        width: 399px; /* Adjusted width */
+        height: 740px; /* Adjusted height */
+        left: 25px; /* Adjusted left position */
+        top: 40px; /* Adjusted top position */
+        border-radius: 25px; /* Reduced border-radius */
+    }
+
+    .social_icons .icon {
+        left: -45px;
+        top: 580px; /* Adjusted for MacBook Air */
+        width: 45px; /* Adjusted icon width */
+        height: 45px;
+    }
+}
